@@ -1,0 +1,9 @@
+{
+  //The test system has two sockets, with 22 core (44 thread) in each giving 88 threads in the system
+  "System.GC.Server": 1,
+  // have also tried setting next two variables as Environment variables COMPlus_GCCpuGroup = 1 and COMPlus_Thread_UseAllCpuGroups = 1
+  "System.GC.GCCpuGroup": 1,
+  "System.Threading.Threadpool.Thread_UseAllCpuGroups": 1,
+  //"System.GC.NoAffinitize": 1,
+  "System.GC.GCHeapAffinitizeRanges": "0:0-43,1:0-43" // have also tried 0-87 and 1-88
+}
